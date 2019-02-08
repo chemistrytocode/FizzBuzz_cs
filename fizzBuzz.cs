@@ -13,16 +13,16 @@ namespace FizzBuzz
         {
             for (int i = 1; i <= 100; i++)
             {
-                NumberCheck(i);
+                Console.WriteLine(NumberCheck(i));
             }
         }
 
-        private static void NumberCheck(int number)
+        private static string NumberCheck(int number)
         {
-            if (DivisibleBy(number, 15)) { Console.WriteLine("FizzBuzz"); }
-            else if (DivisibleBy(number, 3)) { Console.WriteLine("Fizz"); }
-            else if (DivisibleBy(number, 5)) { Console.WriteLine("Buzz"); }
-            else { Console.WriteLine(number); }
+            if (DivisibleBy(number, 15)) { return "FizzBuzz"; }
+            else if (DivisibleBy(number, 3)) { return "Fizz"; }
+            else if (DivisibleBy(number, 5)) { return "Buzz"; }
+            else { return $"{number}"; }
         }
 
         private static bool DivisibleBy(int number, int dividedBy)
